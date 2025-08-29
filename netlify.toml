@@ -2,13 +2,13 @@
   command = "npm ci && npm run build"
   publish = "dist"
 
-# SPA fallback
+# SPA fallback so deep links work
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
 
-# Security headers
+# Basic security headers
 [[headers]]
   for = "/*"
   [headers.values]
