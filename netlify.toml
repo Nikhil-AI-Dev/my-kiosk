@@ -2,11 +2,13 @@
   command = "npm ci && npm run build"
   publish = "dist"
 
+# SPA fallback
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
 
+# Security headers
 [[headers]]
   for = "/*"
   [headers.values]
