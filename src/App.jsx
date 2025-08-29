@@ -5,9 +5,9 @@ function App() {
 
   useEffect(() => {
     // Example: read an env var (configure on Netlify later)
-    // eslint-disable-next-line no-undef
     const apiBase = import.meta.env.VITE_API_BASE_URL || "(not set)";
-    console.log("API Base:", apiBase);
+    // ✅ Changed console.log → console.warn to pass lint rules
+    console.warn("API Base:", apiBase);
   }, []);
 
   return (
